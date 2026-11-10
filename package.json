@@ -1,0 +1,44 @@
+{
+  "name": "wishos-plan-book",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "./plugin.js",
+  "description": "计划任务书（文档态计划）独立插件：把 V12 计划线里「任务书」这一段从技能束中拆出为独立 DSH bundle —— 1 个入口技能 + 3 个工具（四要素校验 / 任务书生成 / 自检）+ 规程全文 reference。Plan-task-book bundle: one entry skill, three tools, protocol reference in-package.",
+  "author": "ZiMing-X",
+  "license": "Apache-2.0",
+  "icon": "icon.svg",
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.2.2-0 || >=0.2.2-rc.1 <0.3.0-0"
+  },
+  "exports": {
+    ".": "./plugin.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./skills.manifest.json": "./skills.manifest.json",
+    "./schemas/*.json": "./schemas/*.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./SPLIT.md": "./SPLIT.md",
+    "./README.md": "./README.md",
+    "./LICENSE": "./LICENSE",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "plugin.js",
+    "cordis.patch.yml",
+    "skills.manifest.json",
+    "skills",
+    "tools",
+    "schemas",
+    "locale",
+    "icon.svg",
+    "SPLIT.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

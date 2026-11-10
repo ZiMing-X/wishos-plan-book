@@ -1,0 +1,11 @@
+# wishos-plan-book bundle patch (public release 0.2.0, 2026-11-08)
+#
+# 一行 Host row：运行时注册 1 个技能（plan-book）与 3 个工具
+# （plan_book_check / plan_book_new / plan_book_health）。
+# 不写预设、不改 profile 配置、不注册客户端 UI；卸载后宿主回到原状。
+#
+# 回滚：删除本行即回到安装前状态。
+- insert:
+    - id: wishos-plan-book
+      name: 'wishos-plan-book'
+      config: {}

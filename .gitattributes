@@ -1,0 +1,4 @@
+# no line-ending conversion: reference files carry md5 registrations (gate A9 checks bytes)
+* -text
+*.png binary
+*.tgz binary

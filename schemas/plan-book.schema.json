@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wishos-plan-book:schemas:plan-book:0.1.0",
+  "title": "计划任务书 · frontmatter",
+  "description": "约束任务书 YAML frontmatter 的最小必备键。正文的批次表结构（四要素可机械提取）不在 JSON Schema 表达范围内，由 plan_book_check / tools/dev/gate.mjs 校验：表头四键分列 + 每行四列非空 + 全文有 total_gate 声明。",
+  "type": "object",
+  "required": ["title", "plan_id", "type", "version", "date", "status", "frozen", "execution_log"],
+  "additionalProperties": true,
+  "properties": {
+    "title": { "type": "string", "minLength": 1, "description": "任务书标题" },
+    "plan_id": { "type": "string", "minLength": 1, "description": "计划 id（同一事实的单一声明锚点，禁止在正文另写一套 id）" },
+    "type": { "type": "string", "description": "固定为「计划任务书（文档态计划）」" },
+    "version": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+$", "description": "计划本体版本；口径变更起新版，旧版保留" },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "日期 YYYY-MM-DD" },
+    "status": { "type": "string", "description": "草案 · 待批红 / 已批红 / 部分完成 / 收口" },
+    "frozen": { "type": "boolean", "description": "true = 计划本体冻结：正文不再就地改，进度写独立执行记录" },
+    "execution_log": { "type": "string", "minLength": 1, "description": "配套执行记录文件（计划/实绩分离的唯一落点）" },
+    "supersedes": { "type": "string", "description": "被本版取代的旧版路径（旧版不得销改）" },
+    "approval": { "type": "string", "description": "批红人 / 批法 / 批红时间" },
+    "scope": { "type": "string", "description": "本任务书覆盖范围一句话" },
+    "redlines": { "type": "string", "description": "红线（正本只读 / 不就地改计划 / 不引入新依赖 等）" }
+  }
+}

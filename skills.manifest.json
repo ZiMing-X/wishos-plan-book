@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-11-08T09:0x+08:00",
+  "source": "拆解自 wishos v12-core 技能束 + 某元项目工具：doc-plan-protocol v1.2.4（规程全文 · 公开版 0.2.0 已做署名归一 + 内部项目代号脱敏 · md5 F67B35E2B6C599047F227607F6BC3867 / 41,117 B）+ plan-template v1.5 §三点六「文档态四要素」+ `_plan4-check.py` v1.0（四要素校验器，JS 侧按同判据重实现并做 parity）。来源登记见 SPLIT.md（不入运行时清单，保持包可移植）。",
+  "private": false,
+  "note": "计划任务书独立插件清单。name/description/whenToUse 由本清单提供，正文由 plugin.js 运行时读取 SKILL.md 并剥离 frontmatter；references/ 不注入，按需读取。",
+  "skills": [
+    {
+      "dir": "plan-book",
+      "name": "plan-book",
+      "description": "计划任务书（文档态计划）唯一入口 —— 判档 → 打靶评估 → 四要素任务书 → 冻结 + 追加式执行记录 → 逐批门禁 → 机器可判总门禁 → 复盘回流。凡「跨会话/跨日、≥3 批、要交给别人接着跑、事后要对账」的任务，先落一份任务书再开工；配套工具 plan_book_check（四要素可机械提取校验）/ plan_book_new（骨架生成）/ plan_book_health（自检）。触发词：计划任务书、任务书、文档态计划、分批执行计划、四要素、推进门禁、总门禁、计划冻结、执行记录、跨会话任务、复盘回流。",
+      "whenToUse": "任务规模 ≥3 批，或跨会话/跨日，或需交接/长期回溯时；要写「任务书 / 方案书 / 分批执行计划」时；要校验一份既有任务书是否真的四要素齐全、门禁可推进时。单步任务、纯只读查询、即问即答不走本技能。"
+    }
+  ]
+}
