@@ -6,6 +6,14 @@
   "description": "计划任务书（文档态计划）独立插件：把 V12 计划线里「任务书」这一段从技能束中拆出为独立 DSH bundle —— 1 个入口技能 + 3 个工具（四要素校验 / 任务书生成 / 自检）+ 规程全文 reference。Plan-task-book bundle: one entry skill, three tools, protocol reference in-package.",
   "author": "ZiMing-X",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiMing-X/wishos-plan-book.git"
+  },
+  "homepage": "https://github.com/ZiMing-X/wishos-plan-book#readme",
+  "bugs": {
+    "url": "https://github.com/ZiMing-X/wishos-plan-book/issues"
+  },
   "icon": "icon.svg",
   "engines": {
     "node": ">=22.19.0",
